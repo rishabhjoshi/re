@@ -1,5 +1,5 @@
 # re
-![comparison](https://github.com/RE-2018/re/blob/master/result.pdf)
+![comparison](https://github.com/RE-2018/re/blob/master/result.png)
 
 
 To train the model:
