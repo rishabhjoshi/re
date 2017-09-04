@@ -1,4 +1,6 @@
 # re
+![comparison](https://github.com/RE-2018/re/blob/master/result.pdf)
+
 
 To train the model:
 python train.py
