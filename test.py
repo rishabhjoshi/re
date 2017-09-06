@@ -110,14 +110,7 @@ def test_func(test_y_file, word_file, pos1_file, pos2_file, ans_file, res_file):
             y_true=all_ans[:all_prob_length]
             y_pred=all_prob2
 
-            print 'macro'
-            print metrics.precision_score(y_true, y_pred, average='macro')
-            print metrics.recall_score(y_true, y_pred, average='macro')
-            print 'micro'
-            print metrics.precision_score(y_true, y_pred, average='micro')  
-            print metrics.recall_score(y_true, y_pred, average='micro')
-            print 'f1-score'
-            print metrics.f1_score(y_true, y_pred, average='weighted')  
+     
 
             #print 'PR curve area:' + str(average_precision)
             #print(classification_report(all_ans[:all_prob_length], all_prob2))
