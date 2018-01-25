@@ -1,7 +1,6 @@
 import tensorflow as tf
 #from sdp import tree
 
-
 def Attention_layer(inputs):
 
     attention_size = 50
