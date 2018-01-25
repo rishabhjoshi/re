@@ -6,7 +6,6 @@ import string
 from settings import Setting
 #from sdp import tree
 
-
 # for word_position_embedding
 def train_word_position_embedding():
     settings = Setting()
