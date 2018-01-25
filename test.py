@@ -164,7 +164,6 @@ def test_func(test_y_file, word_file, pos1_file, pos2_file, ans_file, res_file):
             print 'P@400\n'+str(correct_num_400/400.0)
             print 'P@500\n'+str(correct_num_500/500.0)
             print 'P@1000\n'+str(correct_num_1000/1000.0)
-
             print '~~~Ending'
 
 
