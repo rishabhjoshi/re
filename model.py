@@ -7,6 +7,7 @@ import os
 import attention
 from settings import Setting
 
+
 class GRU:
     def __init__(self, is_training, word_embeddings, word_pos1, word_pos2, settings):
 
