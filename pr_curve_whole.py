@@ -8,7 +8,6 @@ mpl.use('Agg')
 
 import matplotlib.pyplot as plt
 
-
 def file_read(fileName):
     f = open(fileName)
     line = f.readline()
