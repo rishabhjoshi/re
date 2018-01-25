@@ -9,7 +9,6 @@ from model import GRU
 
 from sklearn.metrics import average_precision_score
 
-
 ada_weight = []
 i = 0
 ada_length = 50
