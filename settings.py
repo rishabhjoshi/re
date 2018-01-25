@@ -13,4 +13,3 @@ class Setting(object):
         self.batch_size = 50           #change it to "batch_size". Entity pairs of each batch (batch size)
         #lr_decay = 0.5             #learning rate decay
         self.learning_rate = 0.0010  #empirically, 0.0001 is better
-
