@@ -3,7 +3,6 @@
 # RE
 Relation extraction has been widely used to extract new relational facts from open corpus. Previous relation extraction methods are faced with the problem of wrong labels and noisy data, which substantially decrease the performance of the classifier. In this paper, we propose an ensemble neural networks model - Adaptive Boosting LSTMs with Attention, to more effectively perform relation extraction. Specifically, our model first employs the recursive neural network LSTMs to embed the latent semantics of each sentence. Then we import attention into LSTMs by considering that the words in a sentence do not contribute equally to the sentence representation. Next via adaptive boosting method, we build strategically several neural classifiers. The error feedback of the samples can be attained by the forward of neural networks. Adaptive boosting sets a constraint gradient descent of the neural networks in the loss function based on the error feedback. In this way, we can train a more robust neural network classifier. By ensembling multiple such LSTM classifiers with adaptive boosting, we could build a more effective joint ensemble neural network relation extractor. Experiment results on real dataset demonstrate the superior performance of the pro- posed model, improving F1-score by about 8% compared to the state-of-the-art models.
 
-
 #Evaluation Results
 P@N comparison:
 
