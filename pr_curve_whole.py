@@ -25,11 +25,11 @@ filename = ['Hoffmann','MIMLRE','Mintz','CNN+ATT' ,'PCNN+ATT']
 color = ['red', 'turquoise', 'darkorange', 'cornflowerblue', 'teal']
 
 for i in range(len(filename)):
-    print i
+    print (i)
     precision = np.load('./data/'+filename[i]+'_precision.npy')
     recall  = np.load('./data/'+filename[i]+'_recall.npy')
-    print precision.shape
-    print recall.shape
+    print (precision.shape)
+    print (recall.shape)
     plt.plot(recall, precision, color = color[i], lw=2, label=filename[i])
 
 plt.plot(recall_2017, precision_2017, color = 'pink', lw=2, label='Rank+ExATT')
@@ -40,6 +40,7 @@ y_scores = np.load('./output/all_prob_11_20.npy')
 length = len(y_scores)
 y_true = y_true[:length]
 precision,recall,threshold = precision_recall_curve(y_true,y_scores)
+average_precision = average_precision_score(y_true, y_scores)
 plt.plot(recall[:], precision[:], lw=2, color='navy',label='Ada-LSTMs')
 
 plt.xlabel('Recall')
@@ -48,11 +49,11 @@ plt.ylim([0.3, 1.0])
 plt.xlim([0.0, 0.45])
 
 #plt.title('Precision-Recall')
-#plt.title('Precision-Recall Area={0:0.2f}'.format(average_precision))
+plt.title('Precision-Recall Area={0:0.2f}'.format(average_precision))
 plt.legend(loc="upper right")
 plt.grid(True)
-#plt.savefig('iter_'+str(one_iter))
-plt.savefig('result.pdf')
+plt.savefig('iter.png')
+#plt.savefig('result.pdf')
 
 
 

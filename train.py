@@ -45,7 +45,9 @@ def main(_):
     batch_size = settings.batch_size
 
     with tf.Graph().as_default():
-       sess = tf.Session()
+       config = tf.ConfigProto()
+       config.gpu_options.allow_growth = True
+       sess = tf.Session(config = config)
        with sess.as_default():
             initializer = tf.contrib.layers.xavier_initializer()
             print "model training begin"

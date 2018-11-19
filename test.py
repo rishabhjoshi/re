@@ -43,8 +43,10 @@ def test_func(test_y_file, word_file, pos1_file, pos2_file, ans_file, res_file):
     batch_size = settings.batch_size
 
     with tf.Graph().as_default():
-       sess = tf.Session()
-
+       config = tf.ConfigProto()
+       config.gpu_options.allow_growth = True
+       sess = tf.Session(config = config)
+        
        with sess.as_default():
             print "model testing begin"
             with tf.variable_scope("model"):
